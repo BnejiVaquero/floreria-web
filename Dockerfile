@@ -1,22 +1,24 @@
-# Etapa 1: build
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+# Etapa 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copiar archivos csproj y restaurar dependencias
-COPY *.sln .
-COPY **/*.csproj ./
-RUN for file in *.csproj; do mkdir -p src/$(basename $file .csproj) && mv $file src/$(basename $file .csproj)/; done
-WORKDIR /app/src
+# Copia el archivo csproj y restaura dependencias
+COPY *.csproj ./
 RUN dotnet restore
 
-# Copiar el resto del código y compilar
-WORKDIR /app
-COPY . .
-RUN dotnet publish -c Release -o /app/publish
+# Copia el resto del código y compila
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-# Etapa 2: runtime
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+# Etapa 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/publish .
+COPY --from=build /app/out ./
+
+# Expone el puerto por defecto de ASP.NET
+EXPOSE 80
+
+# Ejecuta la app
 ENTRYPOINT ["dotnet", "floreria.dll"]
+
 
