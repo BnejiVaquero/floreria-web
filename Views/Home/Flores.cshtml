@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Flores";
+}
+
+<section class="contenedor-flores">
+    <h2 class="titulo-seccion">Nuestra colección de flores</h2>
+    <div class="galeria-flores">
+        <div class="tarjeta-flor">
+        <a asp-controller="Home" asp-action="DetalleRamo">
+           <img src="/images/flores.jpg" alt="Flor 1">
+           <p class="nombre-flor">Ramo de Rosas Rojas</p>
+         </a>
+        </div> 
+        <div class="tarjeta-flor">
+        <a asp-controller="Home" asp-action="DetalleTulipanes">
+           <img src="/images/tulipanes.jpg" alt="Flor 1">
+           <p class="nombre-flor">Ramo de Rosas Rojas</p>
+         </a>
+        </div> 
+        <div class="tarjeta-flor">
+        <a asp-controller="Home" asp-action="DetalleGerberas">
+           <img src="/images/gerberas_3.jpg" alt="Flor 1">
+           <p class="nombre-flor">Ramo de Rosas Rojas</p>
+         </a>
+        </div> 
+    </div>
+    
+</section>

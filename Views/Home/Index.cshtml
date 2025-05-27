@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- NUEVA BARRA SUPERIOR -->
+<header class="encabezado">
+   
+    <nav class="menu-superior">
+        <a href="#">Lo más vendido</a>
+        <a href="#">Rosas</a>
+        <a href="#">Flores</a>
+        <a href="#">Cumpleaños</a>
+        <a href="#">Graduación</a>
+        <a href="#">Eventos</a>
+    </nav>
+    
+</header>
+
+<!-- Imagen de fondo -->
+<section class="imagen-fondo"></section>
+
+<!-- Cuadrículas de categorías -->
+<section class="cuadriculas">
+    <div class="cuadro">
+    <a asp-controller="Home" asp-action="Flores">
+        <img src="/images/flores.jpg" alt="Flores" />
+        <div class="etiqueta">Flores</div>
+    </a>
+    </div>
+    <a href="/Cumpleanos" class="cuadro">
+        <img src="/images/feliz_cumpleaños.jpg" alt="Cumpleaños">
+        <div class="etiqueta">Cumpleaños</div>
+    </a>
+    <a href="/Graduaciones" class="cuadro">
+        <img src="/images/graduacion.jpg" alt="Graduaciones">
+        <div class="etiqueta">Graduaciones</div>
+    </a>
+    <a href="/XV" class="cuadro">
+        <img src="/images/xv.jpg" alt="XV Años">
+        <div class="etiqueta">XV</div>
+    </a>
+</section>
+
+<!-- Beneficios -->
+<section class="beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="beneficios-grid">
+        <div>
+            <i class="fas fa-truck"></i>
+            <p>Envío rápido y seguro</p>
+        </div>
+        <div>
+            <i class="fas fa-gift"></i>
+            <p>Empaque especial para regalo</p>
+        </div>
+        <div>
+            <i class="fas fa-hand-holding-heart"></i>
+            <p>Flores frescas directo del productor</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-navs">
+        <a href="/Ayuda">Ayuda</a>
+        <a href="/Nosotros">Nosotros</a>
+        <a href="/Pedido">Mi pedido</a>
+        <a href="/Contacto">Contacto</a>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="pagos">
+            <img src="/images/visa_logo.png" alt="Visa">
+            <img src="/images/master_card_logo.png" alt="MasterCard">
+        </div>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61558479161031"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/rosalinda_flowershop/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        © 2025 - Rosalinda Flower Shop - <a href="/Privacy">Privacy</a>
+    </div>
+</footer>
+

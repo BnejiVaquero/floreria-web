@@ -1,0 +1,73 @@
+
+@{
+    ViewData["Title"] = "Detalle del Ramo";
+}
+
+
+<section class="detalle-ramo">
+    <div class="galeria-vertical">
+      <div class="miniaturas">
+        <img src="/images/gerberas_3.jpg" alt="Vista 1" onclick="cambiarImagen('/images/gerberas_3.jpg')">
+        <img src="/images/gerberas.jpg" alt="Vista 2" onclick="cambiarImagen('/images/gerberas.jpg')">
+        <img src="/images/gerberas_2.jpg" alt="Vista 3" onclick="cambiarImagen('/images/gerberas_2.jpg')">
+      </div>
+
+        <div class="imagen-principal">
+            <img id="imagenGrande" src="/images/gerberas_3.jpg" alt="Imagen principal">
+        </div>
+    </div>
+
+    <div class="informacion-ramo">
+        <h2>Ramo de Gerberas</h2>
+        <p class="precio">$750 MXN</p>
+        <p class="descripcion">
+            Hermoso ramo de Gerberas frescas, ideal para expresar amor y cariño en cualquier ocasión especial.
+            Incluye 10 gerberas premium, follaje natural y envoltura decorativa.
+        </p>
+        <button class="btn-agregar-carrito">Agregar al carrito</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-bottom">
+        <div class="pagos">
+            <img src="/images/visa_logo.png" alt="Visa">
+            <img src="/images/master_card_logo.png" alt="MasterCard">
+        </div>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61558479161031"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/rosalinda_flowershop/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        © 2025 - Rosalinda Flower Shop - <a href="/Privacy">Privacy</a>
+    </div>
+
+
+</footer>
+
+@section Scripts {
+    <script>
+        function cambiarImagen(ruta) {
+            const imagenGrande = document.getElementById('imagenGrande');
+            imagenGrande.src = ruta;
+            imagenGrande.style.display = 'block';
+            if (imagenGrande.nextElementSibling) {
+                imagenGrande.nextElementSibling.remove();
+            }
+        }
+
+        function cambiarVideo(rutaVideo) {
+            const imagenGrande = document.getElementById('imagenGrande');
+            const contenedor = imagenGrande.parentElement;
+            contenedor.innerHTML = 
+                '<video controls autoplay style="width: 100%; height: auto; border-radius: 10px;">' +
+                    '<source src="' + rutaVideo + '" type="video/mp4">' +
+                    'Tu navegador no soporta la reproducción de video.' +
+                '</video>';
+        }
+    </script>
+}

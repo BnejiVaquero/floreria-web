@@ -1,0 +1,399 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* ENCABEZADO SUPERIOR */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 4px solid #f472b6;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.logo-header {
+  height: 55px;           /* Ajusta si lo quieres un poco más visible */
+  width: auto;            /* Ajusta si lo quieres un poco más visible */
+  object-fit: contain;
+  margin-left: 10px;
+  padding: 3px;           /* Le da un poco de respiro */
+  max-width: 100px;       /* Previene que sea demasiado ancho si cambia altura */
+}
+
+
+/* Botón iniciar sesión */
+.btn-sesion {
+  color: #f472b6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-sesion:hover {
+  box-shadow: 0 0 10px #f472b6;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.nombre-tienda {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f472b6;
+  flex: 1;
+  text-align: center;
+}
+
+/* Menú horizontal */
+.menu-superior {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-superior a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.menu-superior a:hover {
+  box-shadow: 0 0 8px #f472b6;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Iniciar sesión */
+.btn-sesion {
+  color: #f472b6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-sesion:hover {
+  box-shadow: 0 0 10px #f472b6;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* IMAGEN DE FONDO PRINCIPAL */
+.imagen-fondo {
+  background-image: url('/images/floreria_logo.png'); /* Reemplaza con tu imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CUADRÍCULAS */
+.cuadriculas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.cuadro {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(244, 114, 182, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.cuadro img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.cuadro:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #f472b6;
+}
+
+.etiqueta {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+  font-weight: bold;
+  color: #f472b6;
+}
+
+/* BENEFICIOS */
+.beneficios {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.beneficios h2 {
+  margin-bottom: 30px;
+  color: #f472b6;
+}
+
+.beneficios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.beneficios-grid div {
+  max-width: 200px;
+}
+
+.beneficios-grid i {
+  font-size: 40px;
+  color: #f472b6;
+  margin-bottom: 10px;
+}
+
+.beneficios-grid p {
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px 20px 20px 20px;
+  background-color: #fff;
+  border-top: 4px solid #f472b6;
+}
+
+.footer-navs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-navs a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-navs a:hover {
+  box-shadow: 0 0 10px #f472b6;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-bottom .pagos img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-bottom .redes a {
+  color: #f472b6;
+  font-size: 24px;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom .redes a:hover {
+  transform: scale(1.2);
+}
+
+/* COPYRIGHT FINAL */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+.footer-copy a {
+  color: #f472b6;
+  text-decoration: none;
+}
+
+.footer-copy a:hover {
+  text-decoration: underline;
+}
+
+.contenedor-flores {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f472b6;
+}
+
+.galeria-flores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.tarjeta-flor {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(244, 114, 182, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+}
+
+.tarjeta-flor:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #f472b6;
+}
+
+.tarjeta-flor img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.nombre-flor {
+  padding: 12px;
+  font-weight: bold;
+  color: #f472b6;
+}
+
+.detalle-ramo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.galeria-vertical {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 300px;
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.miniaturas img, .miniaturas video {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.miniaturas img:hover, .miniaturas video:hover {
+  transform: scale(1.1);
+}
+
+.imagen-principal {
+  flex: 1;
+  max-width: 500px;
+}
+
+.imagen-principal img {
+  width: 300px;       /* Ajusta según lo que consideres "normal" */
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+.informacion-ramo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.informacion-ramo h2 {
+  font-size: 28px;
+  color: #f472b6;
+  margin-bottom: 15px;
+}
+
+.precio {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.descripcion {
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-agregar-carrito {
+  background-color: #f472b6;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-agregar-carrito:hover {
+  background-color: #ec4899;
+}
+
+/* Enlaces del header y footer sin subrayado */
+nav a,
+footer a {
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover,
+footer a:hover {
+  text-decoration: none; /* ← esto elimina la línea al pasar el cursor */
+  color: #d63384; /* opcional: color al hacer hover */
+}
+
+
+
+
+
+

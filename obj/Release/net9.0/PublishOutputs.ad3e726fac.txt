@@ -1,0 +1,7 @@
+D:\C#\dev\floreria\publish\floreria.exe
+D:\C#\dev\floreria\publish\appsettings.Development.json
+D:\C#\dev\floreria\publish\appsettings.json
+D:\C#\dev\floreria\publish\floreria.dll
+D:\C#\dev\floreria\publish\floreria.deps.json
+D:\C#\dev\floreria\publish\floreria.runtimeconfig.json
+D:\C#\dev\floreria\publish\floreria.pdb
