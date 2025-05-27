@@ -1,16 +1,22 @@
-# Etapa base: para ejecutar la app
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# Etapa 1: build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
-EXPOSE 80
 
-# Etapa build: para compilar la app
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
+# Copiar archivos csproj y restaurar dependencias
+COPY *.sln .
+COPY **/*.csproj ./
+RUN for file in *.csproj; do mkdir -p src/$(basename $file .csproj) && mv $file src/$(basename $file .csproj)/; done
+WORKDIR /app/src
+RUN dotnet restore
+
+# Copiar el resto del código y compilar
+WORKDIR /app
 COPY . .
 RUN dotnet publish -c Release -o /app/publish
 
-# Etapa final: junta ambas etapas
-FROM base AS final
+# Etapa 2: runtime
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "floreria.dll"]
+
