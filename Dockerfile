@@ -19,6 +19,6 @@ COPY --from=build /app/out ./
 EXPOSE 80
 
 # Ejecuta la app
-ENTRYPOINT ["dotnet", "floreria-web.dll"]
+ENTRYPOINT ["dotnet", "floreria.dll"]
 
 
